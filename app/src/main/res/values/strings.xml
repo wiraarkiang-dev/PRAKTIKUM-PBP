@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Praktikum week 1</string>
+    <string name="open_form_explicit_intent">/open_form_explicit_intent</string>
+    <string name="open_website_implicit_intent">/open_website_implicit_intent</string>
+    <string name="status_active">/status_active</string>
+    <string name="profile_photo">/profile_photo</string>
+    <string name="input_name">/input_name</string>
+    <string name="show_toast">show_toast</string>
+    <string name="halo_wira">/halo_wira</string>
+</resources>
