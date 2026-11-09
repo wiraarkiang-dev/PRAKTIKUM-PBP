@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val etNama = findViewById<EditText>(R.id.etNama)
+        val etUsia = findViewById<EditText>(R.id.etUsia)
         val btnToast = findViewById<Button>(R.id.btnToast)
         val btnForm = findViewById<Button>(R.id.btnForm)
         val btnBrowser = findViewById<Button>(R.id.btnBrowser)
@@ -27,15 +28,26 @@ class MainActivity : AppCompatActivity() {
         // Explicit Intent with validation
         btnForm.setOnClickListener {
             val nama = etNama.text.toString().trim()
+            val usiaText = etUsia.text.toString().trim()
+            val usia = usiaText.toIntOrNull()
 
-            // Validation: Check if EditText is empty
-            if (nama.isEmpty()) {
-                etNama.error = "Name is required!"
-                Toast.makeText(this, "Please fill in your name first!", Toast.LENGTH_SHORT).show()
+            if (nama.isEmpty() || usiaText.isEmpty()) {
+                // nama atau usia kosong -> error + Toast
+                if (nama.isEmpty()) {
+                    etNama.error = "Name is required!"
+                }
+                if (usiaText.isEmpty()) {
+                    etUsia.error = "Age is required!"
+                }
+                Toast.makeText(this, "Please fill in your name and age first!", Toast.LENGTH_SHORT).show()
+            } else if (usia == null || usia < 0) {
+                // tantangan: usia tidak boleh minus (usia < 0)
+                etUsia.error = "Age must not be negative!"
+                Toast.makeText(this, "Age must be a valid number and not negative!", Toast.LENGTH_SHORT).show()
             } else {
-                // Move activity (Explicit Intent) with data
                 val intent = Intent(this, FormActivity::class.java)
-                intent.putExtra("EXTRA_SENDER", nama)
+                intent.putExtra("EXTRA_NAMA", nama)
+                intent.putExtra("EXTRA_USIA", usia)
                 startActivity(intent)
             }
         }

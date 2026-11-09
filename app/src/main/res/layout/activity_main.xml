@@ -57,6 +57,16 @@
         android:inputType="text"
         tools:ignore="Autofill,TextFieldSize" />
 
+    <!-- Input Age -->
+    <EditText
+        android:id="@+id/etUsia"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:hint="input_age"
+        android:inputType="number"
+        tools:ignore="Autofill,TextFieldSize" />
+
     <!-- Button Navigation & Action -->
     <Button
         android:id="@+id/btnToast"

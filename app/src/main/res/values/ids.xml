@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvWelcome" type="id" />
+    <item name="etInputMessage" type="id" />
+    <item name="btnSend" type="id" />
+</resources>

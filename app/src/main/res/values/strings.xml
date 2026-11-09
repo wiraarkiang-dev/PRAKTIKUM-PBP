@@ -7,4 +7,7 @@
     <string name="show_toast">Show Toast</string>
     <string name="open_form_explicit_intent">Open Form (Explicit Intent)</string>
     <string name="open_web_implicit_intent">Open Website (Implicit Intent)</string>
+    <string name="welcome">Hello, %s! Write your message:</string>
+    <string name="write_message_or_notes">Write message or notes</string>
+    <string name="save">Save</string>
 </resources>
